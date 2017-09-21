@@ -101,3 +101,9 @@ ENV/
 # JetBrains
 .idea
 
+# macOS
+.DS_Store
+
+# JigsawRules
+rules.txt
+src/main.py
