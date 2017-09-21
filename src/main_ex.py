@@ -1,5 +1,5 @@
 from rules.akamai import Akamai
-from rules.antispoofing import AntiSpoofing
+from rules.antispoofing import *
 from rules.apple import *
 from rules.chnip import CHNIP
 from rules.final import Final
@@ -19,7 +19,10 @@ HK = 'HONGKONG_PROXY'
 if __name__ == '__main__':
     rules = [
         Home(HOME),
-        AntiSpoofing(DEFAULT_PROXY),
+        YouTube(UNLIMITED),
+        Google(ASIA),
+        Twitter(ASIA),
+        Facebook(DEFAULT_PROXY),
         Akamai(DEFAULT_PROXY),
         Telegram(ASIA),
         AppleMaps(DIRECT),
