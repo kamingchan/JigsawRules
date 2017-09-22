@@ -16,6 +16,7 @@ class iCloud(Rules):
     def __str__(self):
         return '''# Rule for iCloud
 USER-AGENT,*CloudKit*,{proxy_group}
+USER-AGENT,*cloudd*,{proxy_group}
 DOMAIN-SUFFIX,icloud.com,{proxy_group}
 '''.format(
             proxy_group=self.proxy_group
