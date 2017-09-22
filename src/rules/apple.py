@@ -1,6 +1,14 @@
 from rules.rules import Rules
 
 
+class AppleCDN(Rules):
+    def __str__(self):
+        return '''# Rule for Apple CDN
+DOMAIN-SUFFIX,mzstatic.com,{proxy_group} // Apple CDN for image, video, apps
+'''.format(
+            proxy_group=self.proxy_group
+        )
+
 class AppleMaps(Rules):
     def __str__(self):
         return '''# Rule for Apple Maps
