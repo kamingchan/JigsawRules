@@ -4,6 +4,7 @@ from rules.rules import Rules
 class Telegram(Rules):
     def __str__(self):
         return '''# Rule for Telegram
+USER-AGENT,ph.telegra.Telegraph/*,{proxy_group}
 IP-CIDR,109.239.140.0/24,{proxy_group},no-resolve
 IP-CIDR,149.154.160.0/22,{proxy_group},no-resolve
 IP-CIDR,149.154.164.0/22,{proxy_group},no-resolve
