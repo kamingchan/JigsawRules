@@ -32,6 +32,8 @@ DOMAIN-SUFFIX,goo.gl,{proxy_group},force-remote-dns
 class YouTube(Rules):
     def __str__(self):
         return '''# Rule for YouTube
+USER-AGENT,YouTube/*,{proxy_group},force-remote-dns
+USER-AGENT,com.google.ios.youtube/*,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,googlevideo.com,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,youtu.be,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,ytimg.com,{proxy_group},force-remote-dns
@@ -43,6 +45,7 @@ DOMAIN-SUFFIX,ytimg.com,{proxy_group},force-remote-dns
 class Twitter(Rules):
     def __str__(self):
         return '''# Rule for Twitter
+USER-AGENT,Twitter/*,{proxy_group},force-remote-dns
 DOMAIN-KEYWORD,twitter,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,t.co,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,twimg.com,{proxy_group},force-remote-dns
