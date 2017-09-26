@@ -46,6 +46,7 @@ class Twitter(Rules):
     def __str__(self):
         return '''# Rule for Twitter
 USER-AGENT,Twitter/*,{proxy_group},force-remote-dns
+USER-AGENT,Tweetbot/*,{proxy_group},force-remote-dns
 DOMAIN-KEYWORD,twitter,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,t.co,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,twimg.com,{proxy_group},force-remote-dns
