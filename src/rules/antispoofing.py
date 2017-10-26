@@ -53,3 +53,12 @@ DOMAIN-SUFFIX,twimg.com,{proxy_group},force-remote-dns
 '''.format(
             proxy_group=self.proxy_group
         )
+
+
+class WhatsApp(Rules):
+    def __str__(self):
+        return '''# Rule for WhatsApp
+DOMAIN-SUFFIX,whatsapp.net,{proxy_group},,force-remote-dns
+'''.format(
+            proxy_group=self.proxy_group
+        )
