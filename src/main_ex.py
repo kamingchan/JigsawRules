@@ -2,6 +2,7 @@ from rules.akamai import Akamai
 from rules.antispoofing import *
 from rules.apple import *
 from rules.chnip import CHNIP
+from rules.cloudspeed import CloudSpeed
 from rules.final import Final
 from rules.home import Home
 from rules.lanip import LANIP
@@ -19,6 +20,7 @@ HK = 'HONGKONG_PROXY'
 if __name__ == '__main__':
     rules = [
         Home(HOME),
+        CloudSpeed(DIRECT),
         YouTube(UNLIMITED),
         Google(ASIA),
         Twitter(ASIA),
