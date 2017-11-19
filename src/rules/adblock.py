@@ -9,7 +9,7 @@ class ADBlock(Rules):
         hosts_url = 'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts'
         hosts_list = requests.get(hosts_url).text.split('\n')
         hosts_list = map(lambda x: x.strip(), hosts_list)
-        hosts_list = filter(lambda x: not x.startswith('#') and x is not '', hosts_list)
+        hosts_list = filter(lambda x: x.startswith('0.0.0.0'), hosts_list)
         self.ad_domains = list()
         for host in hosts_list:
             fake_ip, domain = host.split(' ')
