@@ -6,7 +6,7 @@ from rules.rules import Rules
 class ADBlock(Rules):
     def __init__(self, proxy_group):
         super().__init__(proxy_group)
-        hosts_url = 'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts'
+        hosts_url = 'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts'
         hosts_list = requests.get(hosts_url).text.split('\n')
         hosts_list = map(lambda x: x.strip(), hosts_list)
         hosts_list = filter(lambda x: not x.startswith('#') and x is not '', hosts_list)
