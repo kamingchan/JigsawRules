@@ -50,6 +50,7 @@ USER-AGENT,Tweetbot/*,{proxy_group},force-remote-dns
 DOMAIN-KEYWORD,twitter,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,t.co,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,twimg.com,{proxy_group},force-remote-dns
+DOMAIN-SUFFIX,tapbots.com,{proxy_group}
 '''.format(
             proxy_group=self.proxy_group
         )
