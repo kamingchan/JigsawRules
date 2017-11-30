@@ -32,8 +32,8 @@ DOMAIN-SUFFIX,goo.gl,{proxy_group},force-remote-dns
 class YouTube(Rules):
     def __str__(self):
         return '''# Rule for YouTube
-USER-AGENT,YouTube/*,{proxy_group},force-remote-dns
-USER-AGENT,com.google.ios.youtube/*,{proxy_group},force-remote-dns
+USER-AGENT,YouTube/*,{proxy_group}
+USER-AGENT,com.google.ios.youtube/*,{proxy_group}
 DOMAIN-SUFFIX,googlevideo.com,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,youtu.be,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,ytimg.com,{proxy_group},force-remote-dns
@@ -45,12 +45,12 @@ DOMAIN-SUFFIX,ytimg.com,{proxy_group},force-remote-dns
 class Twitter(Rules):
     def __str__(self):
         return '''# Rule for Twitter
-USER-AGENT,Twitter/*,{proxy_group},force-remote-dns
-USER-AGENT,Tweetbot/*,{proxy_group},force-remote-dns
+USER-AGENT,Twitter/*,{proxy_group}
+USER-AGENT,Tweetbot/*,{proxy_group}
 DOMAIN-KEYWORD,twitter,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,t.co,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,twimg.com,{proxy_group},force-remote-dns
-DOMAIN-SUFFIX,tapbots.com,{proxy_group}
+DOMAIN-SUFFIX,tapbots.com,{proxy_group} 
 '''.format(
             proxy_group=self.proxy_group
         )
@@ -59,7 +59,8 @@ DOMAIN-SUFFIX,tapbots.com,{proxy_group}
 class WhatsApp(Rules):
     def __str__(self):
         return '''# Rule for WhatsApp
-DOMAIN-SUFFIX,whatsapp.net,{proxy_group},,force-remote-dns
+USER-AGENT,WhatsApp/*,{proxy_group}
+DOMAIN-SUFFIX,whatsapp.net,{proxy_group},force-remote-dns
 '''.format(
             proxy_group=self.proxy_group
         )
