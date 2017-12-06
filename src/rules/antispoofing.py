@@ -46,11 +46,12 @@ class Twitter(Rules):
     def __str__(self):
         return '''# Rule for Twitter
 USER-AGENT,Twitter/*,{proxy_group}
+USER-AGENT,Twitter-Mac/*,{proxy_group}
 USER-AGENT,Tweetbot/*,{proxy_group}
 DOMAIN-KEYWORD,twitter,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,t.co,{proxy_group},force-remote-dns
 DOMAIN-SUFFIX,twimg.com,{proxy_group},force-remote-dns
-DOMAIN-SUFFIX,tapbots.com,{proxy_group} 
+DOMAIN-SUFFIX,tapbots.com,{proxy_group}
 '''.format(
             proxy_group=self.proxy_group
         )
