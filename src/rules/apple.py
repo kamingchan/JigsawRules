@@ -5,6 +5,7 @@ class AppleCDN(Rules):
     def __str__(self):
         return '''# Rule for Apple CDN
 DOMAIN-SUFFIX,mzstatic.com,{proxy_group} // Apple CDN for image, video, apps
+DOMAIN-SUFFIX,swcdn.apple.com,{proxy_group} // Apple CDN for software updates
 '''.format(
             proxy_group=self.proxy_group
         )
