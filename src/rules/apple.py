@@ -50,12 +50,3 @@ DOMAIN-SUFFIX,audio.itunes.apple.com,{proxy_group}
 '''.format(
             proxy_group=self.proxy_group
         )
-
-
-class Podcast(Rules):
-    def __str__(self):
-        return '''# Rule for Podcast App
-USER-AGENT,Podcasts/*,{proxy_group}
-'''.format(
-            proxy_group=self.proxy_group
-        )

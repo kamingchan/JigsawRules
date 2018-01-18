@@ -65,3 +65,22 @@ DOMAIN-SUFFIX,whatsapp.net,{proxy_group},force-remote-dns
 '''.format(
             proxy_group=self.proxy_group
         )
+
+
+class Instagram(Rules):
+    def __str__(self):
+        return '''# Rule for Instagram
+USER-AGENT,Instagram*,{proxy_group}
+DOMAIN-SUFFIX,cdninstagram.com,{proxy_group}
+'''.format(
+            proxy_group=self.proxy_group
+        )
+
+
+class Dropbox(Rules):
+    def __str__(self):
+        return '''# Rule for Dropbox
+DOMAIN-KEYWORD,dropbox,{proxy_group},force-remote-dns
+'''.format(
+            proxy_group=self.proxy_group
+        )
